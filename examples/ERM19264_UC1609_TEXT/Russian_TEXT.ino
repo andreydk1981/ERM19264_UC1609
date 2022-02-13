@@ -33,16 +33,16 @@
 
 #define mylcdheight 64
 #define mylcdwidth  192
-#define VbiasPOT 0x49 // contrast 00 to FF , default 0x49 , user adjust
+#define VbiasPOT 0x15 // contrast 00 to FF , default 0x49 , user adjust
 
 #define DISPLAY_DELAY_ONE 5000
 #define DISPLAY_DELAY_TWO 0
 #define MYCOUNT_UPTIME 1000
 
 // GPIO 5-wire SPI interface
-#define CD 10 // GPIO pin number pick any you want 
-#define RST 9 // GPIO pin number pick any you want
-#define CS 8  // GPIO pin number pick any you want
+#define CD 5 // GPIO pin number pick any you want 
+#define RST 4 // GPIO pin number pick any you want
+#define CS 12  // GPIO pin number pick any you want
 // GPIO pin number SCK(UNO 13) , HW SPI , SCK
 // GPIO pin number SDA(UNO 11) , HW SPI , MOSI
 
