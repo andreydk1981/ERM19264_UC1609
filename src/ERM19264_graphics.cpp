@@ -142,13 +142,13 @@ void ERM19264_graphics::drawLine(int16_t x0, int16_t y0,
 					uint8_t color) {
 	int16_t steep = abs(y1 - y0) > abs(x1 - x0);
 	if (steep) {
-		swap(x0, y0);
-		swap(x1, y1);
+		swap2(x0, y0);
+		swap2(x1, y1);
 	}
 
 	if (x0 > x1) {
-		swap(x0, x1);
-		swap(y0, y1);
+		swap2(x0, x1);
+		swap2(y0, y1);
 	}
 
 	int16_t dx, dy;
@@ -248,13 +248,13 @@ void ERM19264_graphics::fillTriangle ( int16_t x0, int16_t y0,
 	int16_t a, b, y, last;
 
 	if (y0 > y1) {
-		swap(y0, y1); swap(x0, x1);
+		swap2(y0, y1); swap2(x0, x1);
 	}
 	if (y1 > y2) {
-		swap(y2, y1); swap(x2, x1);
+		swap2(y2, y1); swap2(x2, x1);
 	}
 	if (y0 > y1) {
-		swap(y0, y1); swap(x0, x1);
+		swap2(y0, y1); swap2(x0, x1);
 	}
 
 	if(y0 == y2) {
@@ -287,7 +287,7 @@ void ERM19264_graphics::fillTriangle ( int16_t x0, int16_t y0,
 		sa += dx01;
 		sb += dx02;
 
-		if(a > b) swap(a,b);
+		if(a > b) swap2(a,b);
 		drawFastHLine(a, y, b-a+1, color);
 	}
 
@@ -298,7 +298,7 @@ void ERM19264_graphics::fillTriangle ( int16_t x0, int16_t y0,
 		b   = x0 + sb / dy02;
 		sa += dx12;
 		sb += dx02;
-		if(a > b) swap(a,b);
+		if(a > b) swap2(a,b);
 		drawFastHLine(a, y, b-a+1, color);
 	}
 }
