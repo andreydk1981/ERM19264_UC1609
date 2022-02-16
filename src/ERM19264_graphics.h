@@ -16,7 +16,7 @@
  #include "WProgram.h"
 #endif
 
-#define swap(a, b) { int16_t t = a; a = b; b = t; }
+#define swap2(a, b) { int16_t t = a; a = b; b = t; }
 
 #define ERM19264_ASCII_OFFSET 0x00
 #define ERM19264_ASCII_OFFSET_SP 0x20 // Starts at Space
